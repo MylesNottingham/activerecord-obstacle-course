@@ -27,7 +27,7 @@ describe 'ActiveRecord Obstacle Course, Week 3' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord ----------------------
-    users = User.joins(orders: :items).where("items.id = #{@item_8.id}").distinct.pluck(:name)
+    users = User.joins(orders: :items).where("item_id = #{@item_8.id}").distinct.pluck(:name)
     # ------------------------------------------------------------
 
     # Expectation
